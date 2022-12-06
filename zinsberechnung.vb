@@ -20,7 +20,7 @@ Public Class zinsberechnung
             kapital = gesamtkapital.ToString("#,##0.0")
 
             'Ausgabe
-            lst_ergebnisse.Items.Add(i & "                      " & zinssatz & "%" & "                        " & gesamtkapital & "€")
+            lst_ergebnisse.Items.Add(i & "                      " & zinssatz & "%" & "                      " & gesamtkapital & "€")
 
         Next i
 

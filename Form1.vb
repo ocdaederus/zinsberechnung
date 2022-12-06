@@ -1,4 +1,4 @@
-﻿Public Class Form1
+Public Class zinsberechnung
 
     Dim kapital, zinssatz, gesamtkapital As Single
     Dim zeitraum As Long

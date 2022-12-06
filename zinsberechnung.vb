@@ -11,15 +11,16 @@ Public Class zinsberechnung
         zeitraum = txt_zeitraum.Text
 
         'Verarbeitung
+        lst_ergebnisse.Items.Clear()
+        
         For i = Now.Year To Now.Year + zeitraum - 1 Step 1
 
-            gesamtkapital = ((kapital * zinssatz) / 100) + kapital
+            gesamtkapital = ((kapital * zinssatz) / 100) + kapital.ToString("#,##0.00")
 
-            kapital = gesamtkapital
+            kapital = gesamtkapital.ToString("#,##0.0")
 
             'Ausgabe
-            'Kommentar #1: Die Formatierung der Variable "gesamtkapital" wird zu einem späteren Zeitpunkt hinzugefügt.
-            lst_ergebnisse.Items.Add(i & "        " & zinssatz & "        " & gesamtkapital)
+            lst_ergebnisse.Items.Add(i & "                      " & zinssatz & "%" & "                        " & gesamtkapital & "€")
 
         Next i
 
@@ -41,4 +42,5 @@ Public Class zinsberechnung
         End
 
     End Sub
+
 End Class

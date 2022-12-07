@@ -16,6 +16,8 @@ Public Class zinsberechnung
         For i = Now.Year To Now.Year + zeitraum - 1 Step 1
 
             gesamtkapital = ((kapital * zinssatz) / 100) + kapital.ToString("#,##0.00")
+        
+            gesamtkapital = Math.Round(gesamtkapital, 2)
 
             kapital = gesamtkapital.ToString("#,##0.0")
 
